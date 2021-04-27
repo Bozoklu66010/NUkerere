@@ -1,11 +1,12 @@
-#Made by Decayer177
-
 import discord
 from discord.ext import commands
 from discord.ext.commands import bot
 import asyncio
 import time
 import random
+
+token = os.environ.get('DISCORD_BOT_TOKEN')
+
 intents = discord.Intents(messages=True, guilds=True, members=True)
 # Imports the needed libs.
 
@@ -159,9 +160,4 @@ async def info(ctx, member: discord.Member=None):
     print("Action completed: User Info")
 #############################
 
-<<<<<<< HEAD:main.py.py
-token = os.environ.get('DISCORD_BOT_TOKEN')
-=======
-client.run("DISCORD_BOT_TOKEN")
->>>>>>> 37c9788ebd818a987e2fabd63bd0238b4a7631bf:Bot.py
-# Place your Bot's token here
+client.run(token, bot=True)
